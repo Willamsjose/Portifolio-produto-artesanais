@@ -1,0 +1,368 @@
+/* Reset e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Cabeçalho */
+/* Estilos para o logo - Versão com texto abaixo */
+.logo-container {
+    display: flex;
+    flex-direction: column; /* Altera o fluxo para vertical */
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espaço entre logo e texto */
+}
+
+.site-logo {
+    height: 150px;
+    width: auto;
+    border-radius: 50%;
+ /* border: 3px solid #FFD700;*/
+    padding: 5px;
+    background-color: white;
+}
+
+.logo-text {
+    text-align: center; /* Centraliza o texto abaixo da logo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ajuste para mobile */
+@media (max-width: 768px) {
+    .logo-container {
+        gap: 8px; /* Reduz um pouco o espaço em mobile */
+    }
+    
+    .site-logo {
+        height: 70px;
+        margin-bottom: 0; /* Remove a margem pois já temos gap */
+    }
+    
+    .logo-text h1 {
+        font-size: 1.5rem; /* Reduz um pouco o tamanho em mobile */
+    }
+}
+
+/* Navegação */
+nav {
+    background-color: #0a0a0a;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* Seção Hero */
+.hero {
+    background: url('https://static.vecteezy.com/system/resources/previews/037/041/882/non_2x/ai-generated-yarn-in-basket-and-flowers-on-the-table-free-photo.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    background-color: #A0522D;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #8B4513;
+}
+
+.btn-shop {
+    background-color: #FF6B00;
+}
+
+.btn-shop:hover {
+    background-color: #E05D00;
+}
+
+/* Seção de Produtos */
+.products {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #8B4513;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-info h3 {
+    margin-bottom: 0.5rem;
+    color: #A0522D;
+}
+
+.product-info p {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #8B4513;
+    font-size: 1.2rem;
+}
+
+.product-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+/* Seções Sobre e Contato */
+.about, .contact {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.about h2, .contact h2 {
+    margin-bottom: 1.5rem;
+    color: #8B4513;
+}
+
+.contact-info {
+    margin-top: 2rem;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-info i {
+    margin-right: 0.5rem;
+    color: #A0522D;
+}
+
+.social-links {
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    color: #A0522D;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #8B4513;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 2rem;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: #A0522D;
+}
+
+#modal-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.modal-buttons .btn {
+    width: 48%;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+    
+    .modal-buttons {
+        flex-direction: column;
+    }
+    
+    .modal-buttons .btn {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Mensagem de erro */
+.error{
+    color: #d9534f;
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 2rem;
+    background-color: #f8d7da;
+    border-radius: 5px;
+    border: 1px solid #f5c6cb;
+}
